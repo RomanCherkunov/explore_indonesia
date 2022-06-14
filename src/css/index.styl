@@ -2,6 +2,8 @@ $main_dark = #000
 $main_lite = #fff
 $main_highlite = #FBD784
 $main_highlite_title = #FFC178
+$main_border = rgba($main_lite, 30%)
+$border_radius = 7px
 $main_buttons = #FFA343
 $main_shift = 4.7rem;
 
@@ -52,6 +54,18 @@ a {
 // .content_small
 //     max-width: 934px
 //     padding: 0 4rem 4rem
+
+.button 
+    border: none
+    background $main_buttons
+    font: 700 1.3rem/1 'Open Sans', sans-serif;
+    padding 1em 3em 0.9em
+    border-radius $border_radius
+    cursor pointer
+    transition: background 0.3s
+
+    &:hover
+        background: $main_highlite
 
 .header {
     position absolute;
@@ -125,7 +139,7 @@ a {
         font: 0.9rem/1 'Open Sans', sans-serif;
         padding: 0.2rem 0.5rem;
         border-radius: 5px;
-        color: white;
+        color: $main_lite;
 
         &::placeholder {
             color: white;
@@ -139,6 +153,7 @@ a {
             background white;
             opacity: 0.5;
             color: $main_dark;
+
 
             &::placeholder {
                 color: $main_dark;
@@ -241,6 +256,22 @@ a {
         &:hover
             opacity 0.7
 
+.social-horizontal
+    display flex
+    font-size 1.3rem
+
+    &__item
+        display inline-block
+        margin-left 2rem
+
+    &__link
+        display inline-block
+        opacity 1
+        transform: opacity 0.3s
+
+        &:hover
+            opacity: 0.7
+
 .scroll-down
     display flex
     cursor pointer
@@ -271,6 +302,19 @@ a {
     &__image
         width 100%
 
+.section-col-2
+    &:first-child
+        width 44%
+    &:last-child
+        width 40%
+    &__image
+        width 100%
+
+.section-border
+    padding-bottom 3rem
+    border-bottom 1px solid $main_border
+    margin-bottom 3rem
+
 .arrow-link
     text-decoration none
     display flex
@@ -282,6 +326,106 @@ a {
     &_centered
         justify-content center
 
+/** Footer **/
+.start
+    display flex
+    align-items center
+    justify-content space-between
+
+    &__title
+        font-size: 2.66rem
+        font-weight 700
+        margin-right 3rem
+
+    &__desc
+        font-size 1.22rem
+        margin-right 3rem
+
+    &__content
+        display flex
+        align-items center
+
+.subscribe
+    width 27%
+    &__title
+        font-size: 2rem
+        font-weight bold
+        line-height 1.4
+        margin-bottom 1.38em
+
+.email
+    width 100%
+    display grid
+    grid-template-columns 1fr auto
+    border-bottom 1px solid $main_border
+
+    &__form
+        background none
+        border: none
+        font: 1.1rem/1 'Open Sans', 'sans-serif';
+        padding 1.1em 0.77em 1.77em;
+        color: $main_lite
+
+        &::placeholder
+            color: rgba($main_lite, 50%)
+
+        &:focus
+            border: none
+            outline: none
+
+    &__button
+        position relative
+        padding 0
+        height 100%
+        width 3.55em
+        border-radius: $border_radius $border_radius 0 0;
+        display flex
+        align-items center
+        justify-content center
+
+.menu
+    &__title
+        color: $main_highlite
+        font-weight 700
+        font-size 1.1rem
+        margin-bottom 0.6em
+
+    &__item
+        margin-bottom 0.8rem
+
+    &__link
+        color: $main_lite
+        text-decoration none
+
+        &:hover,
+        &:visited,
+        &:active
+            color: $main_lite
+
+.footer
+    &__content
+        display flex
+        justify-content space-between
+        margin-bottom 7rem
+
+    &__bottom
+        display flex
+        justify-content space-between
+
+    &__link
+        color: $main_lite
+        text-decoration none
+        font-size: 0.833rem
+        display inline-block
+        margin-right 4.5rem
+
+        &:hover,
+        &:visited,
+        &:active
+            color: $main-lite
+
+        &:last-child
+            margin-right 0
 
 /** Gallery **/
 .gallery
@@ -301,35 +445,40 @@ a {
 
 // Icons //
 .icon__instagram
-    width 1.3rem
-    height 1.3rem
+    width 1.3em
+    height 1.3em
     background: url('/images/icons/instagram.svg') no-repeat center center
     background-size contain
     
 .icon__facebook
-    width 1.3rem
+    width 1.3em
     height 1.3rem
     background: url('/images/icons/facebook.svg') no-repeat center center
     background-size contain
 
 .icon__twitter
-    width 1.3rem
-    height 1.3rem
+    width 1.3em
+    height 1.3em
     background: url('/images/icons/twitter.svg') no-repeat center center
     background-size contain
 
 .icon__arrow_downward
-    width 1rem
-    height 1.4rem
+    width 1em
+    height 1.4em
     background: url('/images/icons/arrow_downward.svg') no-repeat center center
     background-size: contain
 
 .icon__arrow_rightward
-    width 1.6rem
-    height 1.2rem
+    width 1.6em
+    height 1.2em
     background: url('/images/icons/arrow_rightward.svg') no-repeat center center
     background-size: contain
 
+.icon__right
+    width 1.5em
+    height 1.5em
+    background: url('/images/icons/arrow_right.svg') no-repeat center center
+    background-size: contain
 
 @media screen and (max-width: 1790px)
     html,
