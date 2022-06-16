@@ -18,23 +18,21 @@ burgerControlNode.addEventListener('click', (_e) => {
     } else {
         modal.style.display = 'block'
     }
+    if(BODY.style.overflow === 'hidden') {
+        BODY.style.overflow = 'auto'
+    } else {
+        BODY.style.overflow = 'hidden'
+    }
     burgerNode.classList.toggle(MENU_OPENED_CLASS)
-    BODY.classList.toggle('body_burger-opened')
-    // modal.addEventListener('click', (e) => {
-    //     modal.classList.toggle('modal_active')
-    //     console.log('fsfsfsfsfsf')
-    // })
+    // BODY.classList.toggle('body_burger-opened')
+    modal.addEventListener('click', (e) => {
+        modal.style.display = 'none'
+        burgerNode.classList.remove(MENU_OPENED_CLASS)
+        BODY.style.overflow = 'auto'
+        console.log('fsfsfsfsfsf')
+    })
     // burgerNode.classList.toggle(MENU_OPENED_CLASS)
     // BODY.classList.toggle('body_burger-opened')
     // modal.classList.remove('modal')
     // modal.classList.add('modal_active')
 })
-
-// document.addEventListener('click', (e) => {
-//     // e.stopPropagation()
-//     // console.log(e.target)
-//     if(burgerNode.classList.contains(MENU_OPENED_CLASS)) {
-//         burgerNode.classList.toggle(MENU_OPENED_CLASS)
-//         console.log('sfsdfdsfsdf')
-//     }
-// })
