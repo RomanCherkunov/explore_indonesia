@@ -13,14 +13,21 @@ const burgerControlNode = document.querySelector('.burger-menu__control')
 console.log(BODY)
 
 burgerControlNode.addEventListener('click', (_e) => {
-    modal.addEventListener('click', (e) => {
-        modal.classList.remove('modal_active')
-        console.log('fsfsfsfsfsf')
-    })
+    if(modal.style.display === 'block') {
+        modal.style.display = 'none'
+    } else {
+        modal.style.display = 'block'
+    }
     burgerNode.classList.toggle(MENU_OPENED_CLASS)
     BODY.classList.toggle('body_burger-opened')
-    modal.classList.remove('modal')
-    modal.classList.add('modal_active')
+    // modal.addEventListener('click', (e) => {
+    //     modal.classList.toggle('modal_active')
+    //     console.log('fsfsfsfsfsf')
+    // })
+    // burgerNode.classList.toggle(MENU_OPENED_CLASS)
+    // BODY.classList.toggle('body_burger-opened')
+    // modal.classList.remove('modal')
+    // modal.classList.add('modal_active')
 })
 
 // document.addEventListener('click', (e) => {
