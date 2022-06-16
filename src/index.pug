@@ -11,20 +11,24 @@ html(lang="ru")
         link(rel="stylesheet" href="/css/index.css")
         script(src="/css/libs/gallery.js") 
     body
+        .modal
         .cover-space
         header.header
             .header__content
                 a.logo(href='/')
                     h1.logo__title QWERy
-                nav.main-nav.header__center
-                    ul.main-nav__list 
-                        li.main-nav__item 
-                            a.main-nav__link.main-nav__link_active(href='#') Information
-                            a.main-nav__link(href='#') About&nbsp;us
-                            a.main-nav__link(href='#') Culture
-                label.search
-                    .search__icon 
-                    input.search__form(type="text" placeholder='Search')
+                .burger-menu
+                    .burger-menu__content
+                        nav.main-nav.header__center
+                            ul.main-nav__list 
+                                li.main-nav__item 
+                                    a.main-nav__link.main-nav__link_active(href='#') Information
+                                    a.main-nav__link(href='#') About&nbsp;us
+                                    a.main-nav__link(href='#') Culture
+                        label.search
+                            .search__icon 
+                            input.search__form(type="text" placeholder='Search')
+                    button.burger-menu__control
         section.section.section__main
             .main-title
                 .main-title__summary Explore the Nature Beauty 
@@ -84,7 +88,6 @@ html(lang="ru")
                     .start__content 
                         h4.start__desc Ready to explore?
                         button.button Get started
-
             footer.footer 
                 .footer__content
                     .subscribe 
