@@ -12,7 +12,7 @@ html(lang="ru")
         script(src="/css/libs/gallery.js") 
     body
         .modal
-        .cover-space
+        //- .cover-space
         header.header
             .header__content
                 a.logo(href='/')
@@ -29,6 +29,7 @@ html(lang="ru")
                             .search__icon 
                             input.search__form(type="text" placeholder='Search')
                     button.burger-menu__control
+        .cover-space
         section.section.section__main
             .main-title
                 .main-title__summary Explore the Nature Beauty 
@@ -46,9 +47,9 @@ html(lang="ru")
                     li.social-networks__item 
                         a.social-networks__link(href='#')
                             .icon__facebook
-            .scroll-down Scroll down
+            .scroll-down#scroll-action Scroll down
                 .scroll-down__icon.icon__arrow_downward
-        .content 
+        .content#scroll-to
             section.section.section-cols 
                 img.section-col.section-col__image(src='/images/enjoy.jpg' alt='Mountains')
                 .section-col.section-col__content 

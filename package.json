@@ -1,10 +1,10 @@
 {
 	"name": "explore",
 	"version": "0.0.1",
-	"description": "lab.webelart.com",
+	"description": "landing page: explore Indonesia",
 	"repository": {
 		"type": "git",
-		"url": "git@github.com:liveldi/lab.webelart.git"
+		"url": "git@github.com:RomanCherkunov/explore_indonesia.git"
 	},
 	"author": "Roman Cherkunov",
 	"license": "ISC",
